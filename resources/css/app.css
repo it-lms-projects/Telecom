@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+table {
+  border: 1px solid lightgray;
+}
+
+th {
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  padding: 2px 4px;
+  color: #383838;
+}
+
+tfoot {
+  color: gray;
+}
+
+tfoot th {
+  font-weight: normal;
+}
+
+th.MuiTableCell-root.MuiTableCell-head.MuiTableCell-sizeMedium {
+    font-weight: bold;
+    font-size: 14px;
+    background: white;
+}
+
+span.MuiButtonBase-root.MuiCheckbox-root {
+  padding: 2px !important;
+}
+
+td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium,
+td.MuiTableCell-root, th.MuiTableCell-root {
+  padding: 8px 16px;
+}
+
+.MuiTableCell-root {    
+    color: rgb(55 132 208);
+}
+
+div.MuiInputBase-root {
+  border-radius: 0;
+}
+
+div.MuiInputBase-root fieldset {
+  border-width: 0 0 1px 0 !important;
+}
+
+div.MuiInputBase-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-width: 0 0 2px 0 !important;
+}
+
+div.MuiAutocomplete-root.MuiAutocomplete-hasPopupIcon {
+  width: 100%;
+}
+
+input#task-sequence-number {
+    font-weight: bold;
+    font-size: 24px;
+    color: slategray;
+}
+
+input.MuiInputBase-input.MuiOutlinedInput-input.MuiInputBase-inputAdornedEnd {
+    padding-left: 0px !important;
+}
+
+
+div.MuiTextField-root label.MuiFormLabel-root.MuiInputLabel-root {
+    margin-left: 0px !important;
+}
+
+div.MuiAutocomplete-root div.MuiTextField-root label.MuiFormLabel-root.MuiInputLabel-root,
+#task-start-date-label, #task-end-date-label  {
+    margin-left: -14px !important;
+}
+
+div.MuiDialogActions-root.MuiDialogActions-spacing.MuiPickersLayout-actionBar {
+  display: none;
+}
+
+li.MuiAutocomplete-option {
+    font-size: 13px;
+}
+
+div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiTableContainer-root {
+  box-shadow: none !important;
+}
+
+th.MuiTableCell-root.MuiTableCell-head.MuiTableCell-sizeMedium:hover {
+    background: #efe7e796;
+    border-right: 3px solid grey;
+    cursor: pointer;
+}
+
+input.MuiInputBase-input.MuiOutlinedInput-input.MuiInputBase-inputSizeSmall {
+  padding: 2px !important;
+}
+
+p.MuiTablePagination-displayedRows div.MuiFormControl-root.MuiTextField-root {
+  width: 25px !important;
+}
+
+.MuiDataGrid-virtualScrollerContent.css-aymtem-MuiDataGrid-virtualScrollerContent {
+    margin-bottom: 150px !important;
+}
+
+.notranslate {
+  display: none !important;
+}

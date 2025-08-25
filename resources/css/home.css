@@ -1,0 +1,8 @@
+div.MuiInputBase-root.MuiOutlinedInput-root {
+    padding: 2px;
+}
+
+div.MuiAutocomplete-root.Mui-expanded.Mui-focused label.MuiInputLabel-root,
+div.MuiAutocomplete-root.Mui-focused.MuiAutocomplete-hasPopupIcon label.MuiInputLabel-root{
+  display: none;
+}
