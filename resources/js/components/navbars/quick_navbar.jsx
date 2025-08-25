@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Moon, Sun } from 'lucide-react';
+import { MdDashboard } from "react-icons/md";
 import { useAuth } from "./../hooks/use_auth";
 import { SlArrowDown } from "react-icons/sl";
 import AppIcon from './../../../assets/icons/quick_gmao.png'
@@ -48,7 +49,8 @@ function Dropdown({ className }) {
             <ul>
                 {items.map((item, index) => {
                     return (
-                        <li key={`key-${index}`} className="px-4 py-2 text-gray-700 cursor-pointer hover:bg-gray-200">
+                        <li key={`key-${index}`} 
+                            className="px-4 py-3 dark:text-white text-gray-700 cursor-pointer dark:hover:bg-[#3c3c3d80] hover:bg-gray-200">
                             <a href={item.path}>{item.title}</a>
                         </li>
                     );
@@ -78,10 +80,13 @@ export default function QuickNavbar({ onBrightnessChanged }) {
     }, [auth.isAuthenticated, auth.user]);
 
     return (
-        <div className="bg-[#2e4573] h-16 flex items-center">
+        <div className="bg-[#2e4573] dark:bg-[#313845] h-16 flex items-center">
             <div className="flex items-center justify-start flex-1">
-                <img src={AppIcon} width="32" height="32" className="mt-2" />
-                <div className="mx-4 text-xl font-bold text-white">
+                <img src={AppIcon} width="32" height="32" className="hidden mt-2" />
+                <a href="/" className="ml-2">
+                    <MdDashboard width={64} height={64} className="text-white text-2xl" />
+                </a>
+                <div className="ml-2 text-2xl font-bold text-white">
                     <a>I.T Management Systems</a>
                 </div>
             </div>
@@ -107,7 +112,7 @@ export default function QuickNavbar({ onBrightnessChanged }) {
                     <SlArrowDown size={16} />
                 </div>
                 {showDropdown
-                    ? <Dropdown className="absolute bottom-0 z-30 w-full bg-white shadow-lg min-h-24 top-16" />
+                    ? <Dropdown className="absolute right-0 z-30 min-w-64 dark:bg-[#272525] bg-white shadow-lg h-auto top-16" />
                     : <></>
                 }
             </div>

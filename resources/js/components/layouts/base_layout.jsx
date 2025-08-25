@@ -26,7 +26,7 @@ export default function BaseLayout({}) {
     }, [navigate]);
 
     return (
-        <div className={`flex flex-col h-screen overflow-hidden App ${darkMode ? 'dark' : ''}`}>
+        <div className={`App flex flex-col h-screen overflow-hidden bg-white dark:bg-gradient-to-r dark:from-[#212843] dark:to-[#2c2d31] ${darkMode ? 'dark' : ''}`}>
             <QuickNavbar onBrightnessChanged={handleOnBrightnessChanged}/>
             <div className="flex-1 h-0">
                 <Suspense fallback={<div>Loading...</div>}>

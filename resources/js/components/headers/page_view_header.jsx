@@ -1,7 +1,6 @@
 import React, { useState, useMemo, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { TextField, InputAdornment } from "@mui/material";
-import { MdOutlineAddTask } from "react-icons/md";
 import FavoritesDropdownMenu from "../dropdowns/favorite/favorites_dropdown_menu";
 import GroupDropdownMenu from "../dropdowns/group/group_dropdown_menu";
 import FilterDropdownMenu from "../dropdowns/filter/filter_dropdown_menu";
@@ -13,8 +12,9 @@ import DropdownHeader from "./dropdown_header";
 import { PrintIcon, ActionsIcon, FilterIcon, GroupIcon, FavoritesIcon, ArrowRightIcon } from "./../icons/svg";
 import { useClickOutside } from "../hooks/use_click_outside";
 
-export default function PageViewHeader({ 
+export default function PageViewHeader({
     title, // The title of the page
+    actionTitle, // The title of main action button
     selectionCount, // The number of selected rows in the table
     maxRowsCount, // The total number of rows in the table
     options, // The options for the search box
@@ -260,9 +260,8 @@ export default function PageViewHeader({
                         <div className="flex flex-row items-center gap-1">
                             <button
                                 className="px-2 min-w-48 h-[35px] text-white flex flex-row gap-2 items-center justify-start bg-blue-700 hover:bg-blue-900 mx-0 my-2 font-semibold border-xs shadow-sm p-2"
-                                onClick={handleCreateTask}>
-                                <MdOutlineAddTask size={24} />
-                                <span className="mx-1">Nouveau</span>
+                                onClick={handleCreateTask}>                                
+                                <span className="mx-1">{actionTitle}</span>
                             </button>
                             <div className={`${selectedRows > 0 ? "" : "invisible"} bg-blue-200 h-[35px] px-2 py-1 flex gap-1 flex-row items-center`}>
                                 <span className="text-blue-700">{selectedRows} sélectionnés</span>

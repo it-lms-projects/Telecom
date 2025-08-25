@@ -1,0 +1,43 @@
+const Paths = {
+      // [01. Auth route paths]
+    login : "/login",
+    logout: "/logout",
+
+      // [02. App route paths]
+    home             : "/",
+    dashboard        : "/",
+    compileAttendance: "/attendance/compile",
+    attendances      : "/attendance",
+    addBadge         : "/badges/add",
+    badges           : "/badges",
+    addCredit        : "/credit/add",
+    credits          : "/credit",
+    addEmployee      : "/employees/add",
+    employees        : "/employees",
+    addEquipment     : "/equipment/add",
+    equipments       : "/equipment",
+    addExitPass      : "/exitpass/add",
+    exitPasses       : "/exitpass",
+    addIntervention  : "/intervention/add",
+    interventions    : "/intervention",
+    addAsset         : "/itassets/add",
+    assets           : "/itassets",
+    downtimes        : "/nvr/downtimes",
+    oauthAddApp      : "/oauth/apps/add",
+    oauthApps        : "/oauth/apps",
+    oauthLogs        : "/oauth/logs",
+    addOnCall        : "/oncall/add",
+    onCalls          : "/oncall",
+    addPhoneBook     : "/phonebook/add",
+    phoneBooks       : "/phonebook",
+    addReplacement   : "/replacement/add",
+    replacements     : "/replacement",
+    settings         : "/settings",
+    addSimcard       : "/simcards/add",
+    simcards         : "/simcards",
+    tickets          : "/tickets",
+    addUser          : "/users/add",
+    users            : "/users",
+};
+
+export default Paths;
